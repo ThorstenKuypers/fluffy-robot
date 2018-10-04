@@ -1,13 +1,266 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".working_times">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="real Zeiten für die Woche"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="KW 31 - 16.09. - 23.09."
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3sp"
+            android:text="Claudia" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3sp"
+            android:text="Nancy" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10sp">
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow android:gravity="center_vertical|center_horizontal">
+
+                <TextView />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="von"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <TextView />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="bis"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow android:gravity="center">
+
+                <TextView
+                    android:id="@+id/monday_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:clickable="true"
+                    android:text="Montag" />
+
+                <Button
+                    android:id="@+id/monday_start_time"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_margin="5sp"
+                    android:text="07:00" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="-" />
+
+                <Button
+                    android:id="@+id/monday_end_time"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_margin="5sp"
+                    android:text="14:00" />
+
+            </TableRow>
+
+            <TableRow android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tuesday_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="Dienstag" />
+
+                <Button
+                    android:id="@+id/tuesday_start_time"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_margin="5sp"
+                    android:text="07:00" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="-" />
+
+                <Button
+                    android:id="@+id/tuesday_end_time"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_margin="5sp"
+                    android:text="14:00" />
+
+            </TableRow>
+
+            <TableRow android:gravity="center">
+
+                <TextView
+                    android:id="@+id/wednesday_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="Mittwoch" />
+
+                <Button
+                    android:id="@+id/wednesday_start_time"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_margin="5sp"
+                    android:text="07:00" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="-" />
+
+                <Button
+                    android:id="@+id/wednesday_end_time"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_margin="5sp"
+                    android:text="14:00" />
+
+            </TableRow>
+
+            <TableRow android:gravity="center">
+
+                <TextView
+                    android:id="@+id/thursday_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="Donnerstag" />
+
+                <Button
+                    android:id="@+id/thursday_start_time"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_margin="5sp"
+                    android:text="07:00" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="-" />
+
+                <Button
+                    android:id="@+id/thursday_end_time"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_margin="5sp"
+                    android:text="14:00" />
+
+            </TableRow>
+
+            <TableRow android:gravity="center">
+
+                <TextView
+                    android:id="@+id/friday_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="Freitag" />
+
+                <Button
+                    android:id="@+id/friday_start_time"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_margin="5sp"
+                    android:text="07:00" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="-" />
+
+                <Button
+                    android:id="@+id/friday_end_time"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_margin="5sp"
+                    android:text="14:00" />
+
+            </TableRow>
+
+            <TableRow android:gravity="center">
+
+                <TextView
+                    android:id="@+id/saturday_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="Samstag" />
+
+                <Button
+                    android:id="@+id/saturday_start_time"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_margin="5sp"
+                    android:text="07:00" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:text="-" />
+
+                <Button
+                    android:id="@+id/saturday_end_time"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_margin="5sp"
+                    android:text="14:00" />
+
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

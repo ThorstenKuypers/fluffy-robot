@@ -5,4 +5,5 @@
     <string name="tab_text_3">Stunden</string>
     <string name="action_settings">Einstellungen</string>
     <string name="section_format" translatable="false">Hello World from section: %1$d</string>
+    <string name="time_picker_dlg_header" translatable="true">Choose time</string>
 </resources>

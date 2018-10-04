@@ -4,4 +4,6 @@ import android.arch.lifecycle.ViewModel;
 
 public class WorkingTimesViewModel extends ViewModel {
     // TODO: Implement the ViewModel
+
+
 }
