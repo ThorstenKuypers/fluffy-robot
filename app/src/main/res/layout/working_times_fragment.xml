@@ -8,6 +8,9 @@
         <variable
             name="vm"
             type="String" />
+        <variable
+            name="timeDlgHandlers"
+            type="com.v8judd.spielhalleplaner.DisplayTimePickerDialog" />
     </data>
 
     <LinearLayout
@@ -67,7 +70,7 @@
 
         </LinearLayout>
 
-        <ScrollView
+        <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -104,6 +107,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="5sp"
                         android:clickable="true"
+                        android:onClick="@{timeDlgHandlers::onClick}"
                         android:text="@{vm, default=Montag}" />
 
                     <Button
@@ -272,6 +276,6 @@
                 </TableRow>
 
             </TableLayout>
-        </ScrollView>
+        </android.support.v4.widget.NestedScrollView>
     </LinearLayout>
 </layout>

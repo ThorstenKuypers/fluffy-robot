@@ -2,10 +2,6 @@ package com.v8judd.spielhalleplaner;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
-import android.app.TimePickerDialog;
-import android.arch.lifecycle.ViewModelProviders;
-import android.content.Context;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -14,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
-import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.v8judd.spielhalleplaner.databinding.WorkingTimesFragmentBinding;
@@ -42,9 +37,10 @@ public class WorkTimeFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.working_times_fragment, container, false);
         _binding = WorkingTimesFragmentBinding.inflate(inflater, container, false);
         _binding.setVm(new String("Monday"));
+        _binding.setTimeDlgHandlers(new DisplayTimePickerDialog(getContext()));
 
         //rootView.findViewById(R.id.monday_start_time).setOnClickListener(new DisplayTimePickerDialog(getContext()));
-        _binding.mondayStartTime.setOnClickListener(new DisplayTimePickerDialog(getContext()));
+        //_binding.mondayStartTime.setOnClickListener(new DisplayTimePickerDialog(getContext()));
         rootView.findViewById(R.id.tuesday_start_time).setOnClickListener(new DisplayTimePickerDialog(getContext()));
         rootView.findViewById(R.id.wednesday_start_time).setOnClickListener(new DisplayTimePickerDialog(getContext()));
         rootView.findViewById(R.id.thursday_start_time).setOnClickListener(new DisplayTimePickerDialog(getContext()));
@@ -84,23 +80,3 @@ public class WorkTimeFragment extends Fragment {
     }
 }
 
-class DisplayTimePickerDialog implements View.OnClickListener {
-
-    private Context _ctx;
-
-    DisplayTimePickerDialog(Context ctx) {
-        _ctx = ctx;
-    }
-
-    @Override
-    public void onClick(View v) {
-        Dialog dlg = new TimePickerDialog(_ctx, new TimePickerDialog.OnTimeSetListener() {
-            @Override
-            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                Toast.makeText(_ctx, "selected time: " + hourOfDay + ":" + minute, Toast.LENGTH_LONG).show();
-            }
-        }, 0, 0, true);
-
-        dlg.show();
-    }
-}
