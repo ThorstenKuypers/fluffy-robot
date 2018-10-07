@@ -7,10 +7,7 @@
 
         <variable
             name="vm"
-            type="String" />
-        <variable
-            name="timeDlgHandlers"
-            type="com.v8judd.spielhalleplaner.DisplayTimePickerDialog" />
+            type="com.v8judd.spielhalleplaner.WorkingTimesViewModel" />
     </data>
 
     <LinearLayout
@@ -31,11 +28,12 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <TextView
+            <Button
+                android:id="@+id/btn_select_week"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10sp"
-                android:text="KW 31 - 16.09. - 23.09."
+                android:text='@{vm.btnSelectDateText, default="Datum wählen"}'
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -107,8 +105,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="5sp"
                         android:clickable="true"
-                        android:onClick="@{timeDlgHandlers::onClick}"
-                        android:text="@{vm, default=Montag}" />
+                        android:gravity="center"
+                        android:text="@{vm.MondayDateText, default=Montag}" />
 
                     <Button
                         android:id="@+id/monday_start_time"
@@ -137,7 +135,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5sp"
-                        android:text="Dienstag" />
+                        android:gravity="center"
+                        android:text="@{vm.TuesdayDateText, default=Dienstag}" />
 
                     <Button
                         android:id="@+id/tuesday_start_time"
@@ -166,7 +165,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5sp"
-                        android:text="Mittwoch" />
+                        android:gravity="center"
+                        android:text="@{vm.WednesdayDateText,default=Mittwoch}" />
 
                     <Button
                         android:id="@+id/wednesday_start_time"
@@ -195,7 +195,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5sp"
-                        android:text="Donnerstag" />
+                        android:gravity="center"
+                        android:text="@{vm.ThursdayDateText,default=Donnerstag}" />
 
                     <Button
                         android:id="@+id/thursday_start_time"
@@ -224,7 +225,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5sp"
-                        android:text="Freitag" />
+                        android:gravity="center"
+                        android:text="@{vm.FridayDateText,default=Freitag}" />
 
                     <Button
                         android:id="@+id/friday_start_time"
@@ -253,7 +255,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5sp"
-                        android:text="Samstag" />
+                        android:gravity="center"
+                        android:text="@{vm.SaturdayDateText,default=Samstag}" />
 
                     <Button
                         android:id="@+id/saturday_start_time"
