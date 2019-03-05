@@ -9,6 +9,7 @@ import static java.util.Calendar.OCTOBER;
 import static org.junit.Assert.assertEquals;
 
 public class WorkingTimesViewModelTests {
+
     @Test
     public void selectWeek_shouldCalculateDatesOfWeekdaysFromArbitraryDate() {
 
